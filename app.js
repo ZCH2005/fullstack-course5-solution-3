@@ -61,7 +61,7 @@
             },
 
             controller: MenuListDirectiveController,
-            controllerAs: 'vm',
+            controllerAs: 'menuCtrl',
             bindToController: true
         };
         return ddo;
