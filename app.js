@@ -23,9 +23,7 @@
                 angular.forEach(menus, function (menu) {
                     if (menu.description.indexOf(ctrl.searchTerm) !== -1)
                         ctrl.found.push(menu);
-                });
-
-                alert(ctrl.found[0].description);
+                }); 
             });
         };
 
@@ -48,18 +46,11 @@
 
     function FoundItemsDirective() {
         var ddo = {
-            templateUrl: 'menuList.html',
-            //             template: "<ol>\
-            //     <li ng-repeat = \"item in vm.founditems\"> \
-            //         {{item.description}} \
-            //          <button ng-click=\"vm.onRemove({index:$index})\">Don't want this one!</button> \
-            //     </li> \
-            // </ol>",
+            templateUrl: 'menuList.html',           
             scope: {
-                foundItems: '<',
-                onremove: '&'
+                items: '<',
+                onRemove: '&'
             },
-
             controller: MenuListDirectiveController,
             controllerAs: 'menuCtrl',
             bindToController: true
