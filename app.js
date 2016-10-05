@@ -56,7 +56,7 @@
             //     </li> \
             // </ol>",
             scope: {
-                founditems: '<',
+                foundItems: '<',
                 onremove: '&'
             },
 

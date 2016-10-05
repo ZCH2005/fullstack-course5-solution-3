@@ -1,5 +1,5 @@
 <ol>
-    <li ng-repeat = "item in vm.founditems">
+    <li ng-repeat = "item in vm.foundItems">
         {{item.description}}
         <button ng-click="vm.onRemove({index:$index})">Don't want this one!</button>
     </li>
