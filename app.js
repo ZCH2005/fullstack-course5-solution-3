@@ -10,9 +10,10 @@
     function NarrowItDownController(MenuSearchService) {
         var ctrl = this;
         ctrl.searchTerm = "";
-        ctrl.found = [];
+     //   ctrl.found = [];
 
         ctrl.narrowDown = function () {
+            ctrl.found = [];
             if (ctrl.searchTerm.trim().length === 0) {
                 return;
             }
@@ -46,9 +47,10 @@
 
     function FoundItemsDirective() {
         var ddo = {
+            restrict:'E',
             templateUrl: 'menuList.html',           
             scope: {
-                items: '<',
+                foundItems: '<',
                 onRemove: '&'
             },
             controller: MenuListDirectiveController,
