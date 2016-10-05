@@ -5,5 +5,5 @@
             <button ng-click="menuCtrl.onRemove({index:$index})">Don't want this one!</button>
         </li>
     </ol>
-    <h3 ng-if="menuCtrl.foundItems && menuCtrl.foundItems.length === 0">Nothing found</h3>
+    <h3 style="color:red" ng-if="menuCtrl.foundItems && menuCtrl.foundItems.length === 0">Nothing found</h3>
 </div>
